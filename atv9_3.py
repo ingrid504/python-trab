@@ -1,4 +1,6 @@
-preco = float(input("Digite o preço do produto: R$"))
+preco promocional
+preco = float(input("informe o preco o produto"))
 desconto = preco * 0.05
-preco_promocional = preco - desconto
-print(f"O preço promocional com 5% de desconto é R${preco_promocional:.2f}.")
+promocao = preco - desconto
+print("Desconto", desconto)
+print("Preco promocional ", promocao )
