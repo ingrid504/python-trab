@@ -1,5 +1,7 @@
-A = float(input("Digite o valor de A: "))
-B = float(input("Digite o valor de B: "))
-C = float(input("Digite o valor de C: "))
-delta = B**2 - 4 * A * C
-print(f"O valor de Delta é {delta}.")
+a = float(input("informe o valor de A: "))
+b = float(input("informe o valor de B: "))
+c = float(input("informe o valor de C: "))
+delta = b**2 - 4 * a * c
+print("O valor de Delta = ", delta)
+
+
