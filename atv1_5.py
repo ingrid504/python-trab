@@ -1,6 +1,6 @@
-novo salario
-salario = float(input("Digite o valor do salario" ))
-aumento = salario * 0.15
-novo_salario = salario + aumento
-print(f"Aumento de R$ {aumento: .2f}")
-print(f"Novo_salario de R$ {novo_salario: .2f}")
+dias_trabalhados = int(input("Digite o número de dias trabalhados no mês: "))
+horas_por_dia = 8
+salario_por_hora = 25
+salario_total = dias_trabalhados * horas_por_dia * salario_por_hora
+print(f"O salário total do mês é R${salario_total:.2f}.")
+
