@@ -1,6 +1,6 @@
-km_percorridos = float(input("Digite a quantidade de Km percorridos: "))
-dias_alugados = int(input("Digite a quantidade de dias pelos quais o carro foi alugado: "))
-preco_km = km_percorridos * 0.20
-preco_dias = dias_alugados * 90
-preco_total = preco_km + preco_dias
-print(f"O preço total a pagar é R${preco_total:.2f}.")
+novo salario
+salario = float(input("Digite o valor do salario" ))
+aumento = salario * 0.15
+novo_salario = salario + aumento
+print(f"Aumento de R$ {aumento: .2f}")
+print(f"Novo_salario de R$ {novo_salario: .2f}")
