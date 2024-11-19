@@ -1,14 +1,15 @@
-#Forma um triângulo, o tipo ou não forma um triângulo.
-a = float(input("Informe o valor do lado1= "))
-b = float(input("Informe o valor do lado2=  "))
-c = float(input("Informe  valor do lado3= "))
-if a<b+c and b<a+c and c>a+b :
-    print("os valores informados formam um triangulo")
-    if a==b and a==c :
-         print("EQUILÁTERO")
-    elif a!=b and a!=c and b!=c :
-        print("ESCALENO")
-    else:
-        print("ISÓSCELES")
+nome = input("Digite o nome: ")
+salario = float(input("Digite o salario: "))  # Converte o salário para float
+anos = int(input("Digite quantos anos trabalha na empresa: "))  # Converte o número de anos para int
+
+if anos <= 3:
+    aumento = salario * 0.03
+    faixa_aumento = "3%"
+elif 3 < anos < 10:
+    aumento = salario * 0.12
+    faixa_aumento = "12%"
 else:
-     print("os valores informados não formam um triangulo1")   
+    aumento = salario * 0.20
+    faixa_aumento = "20%"
+
+novo_salario = salario + aumento 
