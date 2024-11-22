@@ -1,8 +1,9 @@
-for i in range(30, 0, -1):
-    # Verifica se o número é divisível por 4
-    if i % 4 == 0:
-        print(f"[{i}]", end=" ")
+contador = 30
+while (contador >= 0):
+    if contador  % 4 == 0:
+        print(f"[{contador}]", end=" ")
     else:
-        print(i, end=" ")
-print()
+        print(contador, end=" ")
+contador = contador -1
+print("Acabou!")
 
