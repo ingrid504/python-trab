@@ -1,0 +1,66 @@
+#Desafio
+def votar():
+    # Contadores para cada tipo de voto
+    votos_candidato_a = 0
+    votos_candidato_b = 0
+    votos_candidato_c = 0
+    votos_candidato_d = 0
+    votos_brancos = 0
+    votos_nulos = 0
+    total_votantes = 0
+
+    while True:
+        try:
+            voto = int(input("Digite seu voto (1-Candidato A, 2-Candidato B, 3-Candidato C, 4-Candidato D, 5-Voto em Branco): "))
+        except ValueError:
+            print("Entrada inválida! Digite um número entre 1 e 5.")
+            continue
+
+        if voto == 1:
+            votos_candidato_a += 1
+        elif voto == 2:
+            votos_candidato_b += 1
+        elif voto == 3:
+            votos_candidato_c += 1
+        elif voto == 4:
+            votos_candidato_d += 1
+        elif voto == 5:
+            votos_brancos += 1
+        else:
+            votos_nulos += 1
+        
+        total_votantes += 1
+
+        continuar = input("Deseja votar novamente (S/N)? ").strip().upper()
+        if continuar != 'S':
+            break
+
+    print("\nResultado da votação:")
+    print(f"Total de votantes: {total_votantes}")
+    print(f"Candidato A: {votos_candidato_a} votos")
+    print(f"Candidato B: {votos_candidato_b} votos")
+    print(f"Candidato C: {votos_candidato_c} votos")
+    print(f"Candidato D: {votos_candidato_d} votos")
+    print(f"Votos Brancos: {votos_brancos} votos")
+    print(f"Votos Nulos: {votos_nulos} votos")
+    
+    votos_totais = {
+        "Candidato A": votos_candidato_a,
+        "Candidato B": votos_candidato_b,
+        "Candidato C": votos_candidato_c,
+        "Candidato D": votos_candidato_d
+    }
+
+    vencedor = max(votos_totais, key=votos_totais.get)  
+
+    max_votos = votos_totais[vencedor]
+    candidatos_empate = [candidato for candidato, votos in votos_totais.items() if votos == max_votos]
+
+    if len(candidatos_empate) > 1:
+        print("\nHouve um empate entre os candidatos:")
+        for candidato in candidatos_empate:
+            print(f"- {candidato}")
+    else:
+        print(f"\nO vencedor da eleição é: {vencedor}")
+        
+votar()
